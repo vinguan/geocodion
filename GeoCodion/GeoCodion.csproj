@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -31,15 +31,18 @@
     <NoStdLib>false</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Address\City.cs" />
+    <Compile Include="Address\Continent.cs" />
+    <Compile Include="Address\Country.cs" />
+    <Compile Include="Address\District.cs" />
+    <Compile Include="Address\Neighborhood.cs" />
+    <Compile Include="Address\State.cs" />
+    <Compile Include="Address\Street.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GeoCoder\IGeoCoder.cs" />
+    <Compile Include="IGeoCoder.cs" />
     <Compile Include="Address\IAddress.cs" />
-    <Compile Include="Location\GeoLocation.cs" />
+    <Compile Include="Address\GeoLocation.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GeoCoder\" />
-    <Folder Include="Address\" />
-    <Folder Include="Location\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

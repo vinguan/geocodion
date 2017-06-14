@@ -1,31 +1,29 @@
-﻿using GeoCodion.Location;
-
-namespace GeoCodion.Address
+﻿namespace GeoCodion.Address
 {
 	/// <summary>
 	/// Address.
 	/// </summary>
 	public interface IAddress
 	{
-		string Street { get; }
+	    GeoLocation GeoLocation { get; }
 
-		string Number { get; }
+        string PostalCode { get; }
 
-		string Neighborhood { get; }
+	    string Number { get; }
 
-        string District { get; }
+        Street Street { get; }
 
-		string PostalCode { get; }
+	    Neighborhood Neighborhood { get; }
 
-		string City { get; }
+	    City City { get; }
 
-		string State { get; }
+        District District { get; }
 
-		string Country { get; }
+	    State State { get; }
 
-		string Continent { get; }
+	    Country Country { get; }
 
-        GeoLocation GeoLocation { get; }
+	    Continent Continent { get; }
 	}
 }
 
