@@ -5,25 +5,55 @@
 	/// </summary>
 	public interface IAddress
 	{
+        /// <summary>
+        /// Gets the GeoLocation
+        /// </summary>
 	    GeoLocation GeoLocation { get; }
 
+        /// <summary>
+        /// Gets the PostalCode
+        /// </summary>
         string PostalCode { get; }
 
-	    string Number { get; }
+        /// <summary>
+        /// Gets the Number
+        /// </summary>
+        string Number { get; }
 
+        /// <summary>
+        /// Gets the Street
+        /// </summary>
         Street Street { get; }
 
-	    Neighborhood Neighborhood { get; }
+        /// <summary>
+        /// Gets the Neighborhood
+        /// </summary>
+        Neighborhood Neighborhood { get; }
 
-	    City City { get; }
+        /// <summary>
+        /// Gets the City
+        /// </summary>
+        City City { get; }
 
+        /// <summary>
+        /// Gets the District
+        /// </summary>
         District District { get; }
 
-	    State State { get; }
+        /// <summary>
+        /// Gets the State
+        /// </summary>
+        State State { get; }
 
-	    Country Country { get; }
+        /// <summary>
+        /// Gets the Country
+        /// </summary>
+        Country Country { get; }
 
-	    Continent Continent { get; }
+        /// <summary>
+        /// Gets the Continent
+        /// </summary>
+        Continent Continent { get; }
 	}
 }
 

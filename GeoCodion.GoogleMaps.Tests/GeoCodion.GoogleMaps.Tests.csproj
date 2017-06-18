@@ -83,10 +83,6 @@
       <Project>{b65b8025-ef7e-4a09-921d-c169ba645bc3}</Project>
       <Name>GeoCodion.GoogleMaps</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GeoCodion\GeoCodion.csproj">
-      <Project>{c7a89d48-e9ca-4a15-b73f-1171bb0b1c05}</Project>
-      <Name>GeoCodion</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

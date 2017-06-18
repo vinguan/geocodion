@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "targets": {
+    ".NETPortable,Version=v4.5,Profile=Profile111": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETPortable,Version=v4.5,Profile=Profile111": []
+  },
+  "packageFolders": {
+    "C:\\Users\\Vinicius Gualberto\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "C:\\GitHubProjects\\geocodion\\GeoCodion\\GeoCodion.csproj",
+      "projectName": "GeoCodion",
+      "projectPath": "C:\\GitHubProjects\\geocodion\\GeoCodion\\GeoCodion.csproj",
+      "projectJsonPath": "C:\\GitHubProjects\\geocodion\\GeoCodion\\project.json",
+      "projectStyle": "ProjectJson"
+    },
+    "frameworks": {
+      "portable45-net45+win8+wpa81": {}
+    }
+  }
+}

@@ -20,7 +20,7 @@ namespace GeoCodion.GoogleMaps.Tests
         {
             try
             {
-                var googleMapsGeoCoder =  GoogleMapsGeoCoderFactory.CreateGoogleMapsGeoCoder();
+                var googleMapsGeoCoder =  GoogleMapsGeoCoderFactory.CreateGoogleMapsGeoCoder(_apiKey);
 
                 IGoogleMapsAddress address = await googleMapsGeoCoder
                                    .ApiKey(_apiKey)

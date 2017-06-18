@@ -3,16 +3,23 @@ using GeoCodion.GoogleMaps.GoogleMapsGeoCodingApiHelpers;
 
 namespace GeoCodion.GoogleMaps.Exceptions
 {
+    /// <summary>
+    /// Represents the GoogleMapsGeoCoderException
+    /// </summary>
     public class GoogleMapsGeoCoderException : Exception
     {
+        /// <summary>
+        /// Gets the GoogleMapsGeoCodingApiStatus
+        /// </summary>
         public GoogleMapsGeoCodingApiStatus GoogleMapsGeoCodingApiStatus { get; }
 
-        public GoogleMapsGeoCoderException(GoogleMapsGeoCodingApiStatus googleMapsGeoCodingApiStatus, string message, Exception innerException) : base(message, innerException)
+
+        internal GoogleMapsGeoCoderException(GoogleMapsGeoCodingApiStatus googleMapsGeoCodingApiStatus, string message, Exception innerException) : base(message, innerException)
         {
             GoogleMapsGeoCodingApiStatus = googleMapsGeoCodingApiStatus;
         }
 
-        public GoogleMapsGeoCoderException(string message, Exception innerException) : base(message, innerException)
+        internal GoogleMapsGeoCoderException(string message, Exception innerException) : base(message, innerException)
         {
 
         }

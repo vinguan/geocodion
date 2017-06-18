@@ -5,7 +5,7 @@ using GeoCodion.GoogleMaps.GoogleMapsGeoCodingApiHelpers;
 
 namespace GeoCodion.GoogleMaps.GeoCoder
 {
-    public interface IGoogleMapsGeoCoder 
+    public interface IGoogleMapsGeoCoder : IGeoCoder
     {
         IGoogleMapsGeoCoderApiKeySettedUp ApiKey(string apiKey);
     }

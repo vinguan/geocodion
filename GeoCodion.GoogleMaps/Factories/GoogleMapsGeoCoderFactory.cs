@@ -8,5 +8,10 @@ namespace GeoCodion.GoogleMaps.Factories
         {
             return new GoogleMapsGeoCoder();
         }
+
+        public static IGoogleMapsGeoCoder CreateGoogleMapsGeoCoder(string apiKey)
+        {
+            return new GoogleMapsGeoCoder(apiKey);
+        }
     }
 }

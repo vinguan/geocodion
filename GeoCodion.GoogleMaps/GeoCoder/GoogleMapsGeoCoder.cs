@@ -13,60 +13,31 @@ namespace GeoCodion.GoogleMaps.GeoCoder
 {
     internal class GoogleMapsGeoCoder : IGoogleMapsGeoCoder, IGoogleMapsGeoCoderApiKeySettedUp
     {
-        #region Fields
+        //Fields
         private IRestionClient _restionClient;
         private string _apiKey;
-        #endregion Fields
 
-        #region Properties
-
-        #region Private Properties
-
-        #endregion Private Properties
-
-        #region Public Properties
+       //Properties
         public GoogleMapsGeoCodingApiResponse GoogleMapsGeoCodingApiResponse { get; private set; }
-        #endregion Public Properties
 
-        #region Protected Properties
-
-        #endregion Protected Properties
-
-        #region Internal Properties
-
-        #endregion Internal Properties
-
-        #endregion Properties
-
-        #region Constructors
-
-        #region Private Constructors
-
-        #endregion Private Constructors
-
-        #region Public Constructors
-
+        //Constructors
         internal GoogleMapsGeoCoder()
         {
             if (_restionClient == null)
                 _restionClient = new RestionClient(GoogleMapsGeoCodingApiConstants.GoogleMapsGeoCodingApiUrl);
         }
 
-        #endregion Public Constructors
+        internal GoogleMapsGeoCoder(string apiKey)
+        {
+            if (_restionClient == null)
+                _restionClient = new RestionClient(GoogleMapsGeoCodingApiConstants.GoogleMapsGeoCodingApiUrl);
 
-        #region Protected Constructors
+            _apiKey = apiKey;
+        }
 
-        #endregion Protected Constructors
+        //Methods
 
-        #region Internal Constructors
-
-        #endregion Internal Constructors
-
-        #endregion Constructors
-
-        #region Methods
-
-        #region Private Methods
+        //Private Methods
         private async Task<GoogleMapsGeoCodingApiResponse> RequestGoogleMapsGeoCodeApi(string rawAddressToGeocode)
         {
             var googleMapsGeoCodeRestionRequest = new RestionRequest()
@@ -263,9 +234,8 @@ namespace GeoCodion.GoogleMaps.GeoCoder
             return googleMapsGeoCodeResponse;
         }
 
-        #endregion Private Methods
 
-        #region Public Methods
+        //Public Methods
         public IGoogleMapsGeoCoderApiKeySettedUp ApiKey(string apiKey)
         {
             _apiKey = apiKey;
@@ -319,7 +289,8 @@ namespace GeoCodion.GoogleMaps.GeoCoder
             return await ReverseGeoCodeAsync(geolocationToReverseGeocode, null);
         }
 
-        public async Task<IGoogleMapsAddress> ReverseGeoCodeAsync(string placeId, GoogleMapsGeoCoderOptions googleMapsGeoCoderOptions)
+        public async Task<IGoogleMapsAddress> ReverseGeoCodeAsync(string placeId,
+            GoogleMapsGeoCoderOptions googleMapsGeoCoderOptions)
         {
             try
             {
@@ -333,20 +304,9 @@ namespace GeoCodion.GoogleMaps.GeoCoder
             }
             catch (Exception ex)
             {
-                throw new GoogleMapsGeoCoderException("An error occured when trying to GeoCode, please check InnerException", ex);
+                throw new GoogleMapsGeoCoderException(
+                    "An error occured when trying to GeoCode, please check InnerException", ex);
             }
         }
-
-        #endregion Public Methods
-
-        #region Protected Methods
-
-        #endregion Protected Methods
-
-        #region Internal Methods
-
-        #endregion Internal Methods
-
-        #endregion Methods 
     }
 }
